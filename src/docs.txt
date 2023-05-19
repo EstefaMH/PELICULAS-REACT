@@ -1,0 +1,5 @@
+DEPENDENCIAS 
+ - router-dom
+ - Axios 
+ - npm install react-bootstrap bootstrap
+
