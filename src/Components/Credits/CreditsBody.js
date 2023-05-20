@@ -14,7 +14,7 @@ function Bar() {
                     <div class="col-md-7">
                         <div class="center_o1r text-end">
                             <h6 class="mb-0 col_red">
-                                <Link to="/">Home</Link>{" "}
+                                <Link to="/">Home</Link>
                                 <span
                                     class="me-2 ms-2
 									text-light"
