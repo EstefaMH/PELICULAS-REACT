@@ -1,7 +1,7 @@
 import { BrowserRouter as Router , Routes , Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Credits from "./Pages/Credits";
-import Contacto from "./Pages/Contacto";
+import Contacto from "./Pages/Contact";
 
 function WebRoutes() {
   return (
@@ -9,7 +9,7 @@ function WebRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/credits" element={<Credits />} />
-        <Route path="/contactenos" element={<Contacto />} />
+        <Route path="/contactenos" element={<Contact />} />
       </Routes>
     </Router>
   );

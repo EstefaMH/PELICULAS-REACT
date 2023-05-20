@@ -1,8 +1,7 @@
 import Footer from "../Components/Footer/Footer";
-import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 
-function Contacto() {
+function Contact() {
   return (
     <div>
   <Navbar />
@@ -27,15 +26,15 @@ function Contacto() {
       <h4 className="info-career-title-data">Formulario de contacto</h4>
       <form className="container-info-career-form">
         <div className="info-career-form-input">
-          <label htmlFor="name">Nombre*</label>
+          <label htmlFor="name">Nombre</label>
           <input className="form-input" required id="name" name="name" type="text" />
         </div>
         <div className="info-career-form-input">
-          <label htmlFor="mail">Email*</label>
+          <label htmlFor="mail">Email</label>
           <input className="form-input" required id="mail" name="mail" type="email" />
         </div>
         <div className="info-career-form-input">
-          <label htmlFor="lastName">Mensaje*</label>
+          <label htmlFor="lastName">Mensaje</label>
           <input className="form-input" required id="lastName" name="lastName" type="text" />
         </div>
         <button type="submit">Enviar</button>
@@ -49,4 +48,4 @@ function Contacto() {
   );
 }
 
-export default Contacto;
+export default Contact;
