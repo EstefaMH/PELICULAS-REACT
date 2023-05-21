@@ -5,10 +5,10 @@ function Navbar() {
         <section id="header">
             <nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
                 <div class="container">
-                    <a class="navbar-brand text-white fw-bold" href="index.html">
+                    <Link to="/" class="navbar-brand text-white fw-bold" >
                         <i class="fa fa-video-camera col_red me-1"></i>
                         YESmovies
-                    </a>
+                    </Link>
                     <button
                         class="navbar-toggler"
                         type="button"
@@ -28,15 +28,21 @@ function Navbar() {
                                 </Link>
                             </li>
                             <li class="nav-item">
-                                <Link to="/credits" class="nav-link" href="movies.html">
+                                <Link to="/movies" class="nav-link">
                                     Peliculas
                                 </Link>
                             </li>
                             <li class="nav-item">
-                                <Link to="/credits" class="nav-link" href="credits.html">
+                                <Link to="/credits" class="nav-link" >
                                     Creditos
                                 </Link>
                             </li>
+                            <li class="nav-item">
+                                <Link to="/contact" class="nav-link" >
+                                    Contactenos
+                                </Link>
+                            </li>
+                        
                         </ul>
                     </div>
                     <form

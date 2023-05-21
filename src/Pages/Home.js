@@ -20,11 +20,13 @@ function Home() {
       GetPopularMovies();
   }, []);
 
+    console.log(movies);
   
 
   return (
     <div>
       <Navbar/>
+
       <Footer />
 
     </div>
