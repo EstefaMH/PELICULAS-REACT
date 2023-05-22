@@ -26,7 +26,6 @@ function Home() {
   return (
     <div>
       <Navbar/>
-
       <Footer />
 
     </div>
