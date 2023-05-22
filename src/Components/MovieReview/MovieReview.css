@@ -1,0 +1,14 @@
+.vista_detallada{
+    padding-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 3%;
+   
+}
+.card-title-detail{
+    font-size: x-large;
+}
+body{
+    height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
