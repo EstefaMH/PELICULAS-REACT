@@ -3,32 +3,17 @@ import GetAllMovies from "../Services/GetAllMovies";
 import React, { useEffect, useState } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import GetPopularMovies from "../Services/GetPopularMovies";
+import BannerHome from "../Components/BannerHome/BannerHome";
+import Header from "../Components/Header/Header";
 
 function Home() {
-  const [movies, setMovies] = useState();
-
-  useEffect(function () {
-    GetAllMovies()
-      .then(function (res) {
-        console.log(res.data.results);
-        setMovies(res.data.results);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
-      GetPopularMovies();
-  }, []);
-
-    console.log(movies);
-  
 
   return (
     <div>
-      <Navbar/>
-
+      <Header />
+      <Navbar />
+      <BannerHome />
       <Footer />
-
     </div>
   );
 }
