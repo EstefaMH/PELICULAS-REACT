@@ -1,8 +1,26 @@
-import React from 'react';
+import { Container } from "@mui/material";
+import ImageList from "@mui/material/ImageList";
+import ImageListItem from "@mui/material/ImageListItem";
+import * as React from "react";
+import { useEffect, useState } from "react";
+import GetUpcomming from "../../Services/GetUpcoming";
+import { Link } from "react-router-dom";
 
 const BannerHome = () => {
-    return (
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  const [banner, setBanner] = useState();
+
+  useEffect(() => {
+    GetUpcomming()
+      .then(function (response) {
+        console.log(response.data);
+        setBanner(response.data.results);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  }, []);
+  return (
+    /* <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -32,8 +50,33 @@ const BannerHome = () => {
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
-    );
-}
+          </div>*/
+    <Container maxWidth="xl">
+      <ImageList variant="masonry" cols={5} gap={8}>
+        {banner &&
+          banner.map((movie, id) => (
+            <ImageListItem key={id} sx={{
+              '&:hover': {
+                transition: 'all 0.3s',
+                transform: 'scale(1.15)',
+                cursor: 'pointer',
+                zIndex: '1',
+              }
+              // Add more CSS properties as needed
+            }}>
+              <Link to={`/about/${movie.id}`}>
+                <img
+                  src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`}
+                  srcSet={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`}
+                  alt={movie.title}
+                  loading="lazy"
+                />
+              </Link>
+            </ImageListItem>
+          ))}
+      </ImageList>
+    </Container>
+  );
+};
 
 export default BannerHome;
