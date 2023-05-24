@@ -47,7 +47,7 @@ const MovieReview = () => {
         <div className="row g-0 filter-movie-review">
           <div className="col-md-4 container-img-review">
             <img
-              src={`https://www.themoviedb.org/t/p/w1000_and_h450_multi_faces${review.poster_path}`}
+              src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${review.poster_path}`}
               className="img-fluid rounded-start img-carReview"
               alt="imagen"
               id="imagen_detalle"
