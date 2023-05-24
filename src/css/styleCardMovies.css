@@ -11,12 +11,18 @@
   }
   
 .containerCardsMovie{
+    
     align-items: stretch;
 }
 .serv_pg1i{
-    height:550px;
+    height:90%;
     
 }
 .inputCardsMovie{
     visibility: hidden;
+}
+@media screen and (min-width:850px){
+    .cardTitle {
+        font-size: 1rem;
+      }
 }
