@@ -57,6 +57,11 @@ function Navbar() {
                   Creditos
                 </Link>
               </li>
+              <li class="nav-item">
+                <Link to="/contact" className="nav-link">
+                  Contacto
+                </Link>
+              </li>
             </ul>
           </div>
           <form onSubmit={handleSubmit}  className="container d-flex col-md-6 col-sm-12 mt-3">
