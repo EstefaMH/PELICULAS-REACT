@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import GetAllMovies from "../../Services/GetAllMovies";
-import "./CardMovieSearch.css";
+import '../../css/styleCardMovies.css'
 
 const CardsMovies = () => {
   const [moviesx, setMovies] = useState();
@@ -19,7 +19,7 @@ const CardsMovies = () => {
   console.log(moviesx);
 
   return (
-    <div id="cardsMovies" class="d-flex flex-wrap justify-content-around p-3">
+    <div id="cardsMovies" class="d-flex flex-wrap justify-content-around p-3 containerCardsMovie">
       {moviesx &&
         moviesx.map((movie, i) => (
           <form
@@ -40,12 +40,12 @@ const CardsMovies = () => {
                 />
               </Link>
 
-              <Link to={`/about/${movie.id}`} className="col_red mt-2 fs-3 title">
+              <Link to={`/about/${movie.id}`} className="col_red mt-2 fs-3 cardTitle" >
                 {movie.original_title}
               </Link>
               <h6 className="mb-0 mt-4"></h6>
               <input
-                className="w-80 bg_dark mt-2 text-white "
+                className="w-80 bg_dark mt-2 text-white inputCardsMovie"
                 id="Id"
                 name="Id"
                 value={movie.id}

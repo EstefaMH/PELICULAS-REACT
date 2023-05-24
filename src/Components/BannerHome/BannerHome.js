@@ -55,7 +55,15 @@ const BannerHome = () => {
       <ImageList variant="masonry" cols={5} gap={8}>
         {banner &&
           banner.map((movie, id) => (
-            <ImageListItem key={id}>
+            <ImageListItem key={id} sx={{
+              '&:hover': {
+                transition: 'all 0.3s',
+                transform: 'scale(1.15)',
+                cursor: 'pointer',
+                zIndex: '1',
+              }
+              // Add more CSS properties as needed
+            }}>
               <Link to={`/about/${movie.id}`}>
                 <img
                   src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`}
