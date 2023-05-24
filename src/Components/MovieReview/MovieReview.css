@@ -1,0 +1,37 @@
+.background-movie-review{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    position: relative;
+}
+
+.filter-movie-review{
+    background-color: rgba(0, 0, 0, 0.566);
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.container-img-review{
+    width: 400px; /* Ancho deseado para el contenedor */
+    height: 400px;
+    margin: 2%;
+}
+
+.image-movie-review{
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; /* Ajusta la altura de la imagen al 100% del contenedor */
+    object-fit: cover; 
+    position: absolute;
+    top: 30%;
+    z-index: 9;
+}
+
+.img-carReview{
+    width: 100%;
+    height: 95%;
+    min-height: 300px;
+    border-radius: 15px;
+    padding: 2%;
+    
+}

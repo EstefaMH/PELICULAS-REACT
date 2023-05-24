@@ -1,7 +1,22 @@
 .serv_pg1i:hover{
     transition: all 0.3s;
     transform: scale(1.15);
-    cursor: pointer;
+    cursor: pointer; 
+    z-index: 1;     
     
-      
+}
+.cardMovieSearch:hover
+.cardTitle {
+    color: #e7e5e5;
+  }
+  
+.containerCardsMovie{
+    align-items: stretch;
+}
+.serv_pg1i{
+    height:550px;
+    
+}
+.inputCardsMovie{
+    visibility: hidden;
 }

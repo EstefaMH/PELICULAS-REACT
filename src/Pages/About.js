@@ -6,13 +6,12 @@ import MovieReview from '../Components/MovieReview/MovieReview';
 import '../css/aboutMovie.css';
 
 const About = () => {
-  const [backgroundUrl, setBackgroundUrl] = useState('');
-
+  
   return (
-    <div className='detail-view' style={{ backgroundImage: `url(${backgroundUrl})` }}>
+    <div>
       <Header />
       <Navbar />
-      <MovieReview setBackgroundUrl={setBackgroundUrl} />
+      <MovieReview />
       <Footer />
     </div>
   );
