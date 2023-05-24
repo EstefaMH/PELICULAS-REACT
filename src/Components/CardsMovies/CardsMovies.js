@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import GetAllMovies from "../../Services/GetAllMovies";
+import "./CardMovieSearch.css";
 
 const CardsMovies = () => {
   const [moviesx, setMovies] = useState();
@@ -26,7 +27,7 @@ const CardsMovies = () => {
             className="cardMovieSearch col-sm-12 col-md-3 mt-3 "
             method="GET"
           >
-            <div className="serv_pg1i bg_dark p-4 pt-3">
+            <div className="serv_pg1i bg_dark p-4 pt-3 cards">
               <h1 className="col_light">
                 <i class="fa fa-film"></i>{" "}
                 <span className="pull-right">{i < 10 ? "0" + i : i}</span>
@@ -39,7 +40,7 @@ const CardsMovies = () => {
                 />
               </Link>
 
-              <Link to={`/about/${movie.id}`} className="col_red mt-2 fs-3">
+              <Link to={`/about/${movie.id}`} className="col_red mt-2 fs-3 title">
                 {movie.original_title}
               </Link>
               <h6 className="mb-0 mt-4"></h6>
