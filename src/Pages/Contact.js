@@ -1,10 +1,12 @@
 import Footer from "../Components/Footer/Footer";
+import Header from "../Components/Header/Header";
 import Navbar from "../Components/Navbar/Navbar";
 import "../contact.css";
 
 function Contact() {
   return (
     <div>
+      <Header />
       <Navbar />
       <div class="container text-center">
         <div class="main-container">
